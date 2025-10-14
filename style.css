@@ -17,7 +17,15 @@ body {
 .tlo1{
     background-image: url(media/tlo1.jpg);
 }
-
+.tlo2{
+    background-image: url(media/tlo2.png);
+}
+.tlo3{
+    background-image: url(media/tlo3.webp);
+}
+.tlo4{
+    background-image: url(media/tlo4.png);
+}
 
 header, footer {
     background-color: #00215298;
@@ -38,8 +46,9 @@ logo {
     font-size: 40px;
     font-family: "cz2";
     padding: 5px;
+    vertical-align: middle;
 
-    border: 0px solid rgba(255, 255, 255, 0);
+    outline: 0px solid rgba(255, 255, 255, 0);
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
 }
@@ -54,16 +63,18 @@ nav>a,opts>a {
     vertical-align: middle;
     text-decoration: none;
     
-    border: 0px solid rgba(255, 255, 255, 0);
+    outline: 0px solid rgba(255, 255, 255, 0);
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
 }
 nav opts>a:hover,logo:hover{
     color: #ff9800;
-    border: 5px solid white;
+    outline: 5px solid white;
+    margin: 0 20px;
 }
 nav opts>a:active,logo:active {
     color: #ffcd2b;
+    margin: 0 5px;
 }
 
 main {
@@ -72,9 +83,12 @@ main {
     margin: auto;
     margin-top: 30px;
     background-color: #00215298;
-    border: 2px solid white;
+    border: 5px solid white;
     backdrop-filter: blur(3px);
     border-radius: 10px;
+
+    opacity: 0;
+    animation: bombowaanimacja 0.4s ease-in-out forwards;
 }
 
 .portfolio {
@@ -84,23 +98,41 @@ main {
   justify-content: center;
 }
 .projekt {
-color: black;
-  background: white;
-  padding: 10px;
-  border-radius: 24px;
-  box-shadow: 0 0 5px #ccc;
-  transition: all 0.3s;
+    color: black;
+    background: white;
+    outline: 0px solid rgba(0, 0, 0, 0);
+    padding: 10px;
+    border-radius: 24px;
+    box-shadow: 0 0 5px #ccc;
+    transition: all 0.3s ;
 }
 .projekt:hover {
     transform: scale(1.1);
+    outline: 100vw solid rgba(0, 0, 0, 0.5);
 }
 .projekt:active {
-    transform: scale(1.5);
+    transform: scale(1.2);
+    outline: 50vw solid rgba(0, 0, 0, 0.95);
+    background:rgba(0, 0, 0, 0.95);
+    color: white;
+    box-shadow: 0 0 0 #rgba(0, 0, 0, 0.95);
+
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;*/
 }
 .projekt>img{
     max-width: min(70vw,840px);
     border-radius: 20px;
+    transition: all 0.3s ;
 }
+/*.projekt>img:active{
+    max-width: 80vw;
+    height: 70vh;
+    border-radius: 0px;
+}*/
 
 form {
   display: flex;
@@ -117,11 +149,12 @@ input, textarea, button {
   color: white;
 }
 button {
-  background: #2e9200;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
+    font-size: 30px;
+    background: #2e9200;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 button:hover {
     background: #09c712;
@@ -129,25 +162,32 @@ button:hover {
 button:active {
     transform: scale(0.9);
 }
+button>img{
+    height: 50px;
+    vertical-align: middle;
+}
 
 footer {
     font-size: 14px; margin-top: 30px;
     background-color: #00215298;
     backdrop-filter: blur(3px);
     border-radius: 10px;
+
+    opacity: 0;
+    animation: bombowaanimacja2 0.6s ease-in-out forwards;
 }
-footer>a>img{
+footer>a>img,footer>img{
     height: 30px;
     vertical-align: middle;
     margin: 2px;
     
-    border: 0px solid rgba(255, 255, 255, 0);
+    outline: 0px solid rgba(255, 255, 255, 0);
     transition: all 0.3s ease-in-out;
     border-radius: 0px;
 }
 footer>a>img:hover{
     color: #ff9800;
-    border: 5px solid white;
+    outline: 5px solid white;
     height: 40px;
     border-radius: 10px;
 }
@@ -157,8 +197,8 @@ footer>a>img:active {
 
 iframe{
     border-radius: 20px;
+    max-width: 100%;
 }
-
 
 
 @media (max-width: 550px) {
@@ -167,7 +207,9 @@ iframe{
     margin: 5px 0;
     padding: 0;
     }
-  .portfolio { flex-direction: column; align-items: center; }
+  .portfolio {flex-direction: column; align-items: center;}
+  .projekt:hover {outline: 100vh solid rgba(0, 0, 0, 0.5);}
+  .projekt:active {outline: 100vh solid rgba(0, 0, 0, 0.95);}
 }
 
 @font-face {
@@ -177,4 +219,13 @@ iframe{
 @font-face {
     font-family: 'cz1';
     src: url(Jersey25-Regular.ttf);
+}
+
+@keyframes bombowaanimacja {
+    33% { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bombowaanimacja2 {
+    66% { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
