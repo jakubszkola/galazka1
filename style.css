@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "cz1", Arial, sans-serif;
+    
+}
+body {
+    background: #f9f9f9;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+.tlo1{
+    background-image: url(media/tlo1.jpg);
+}
+
+
+header, footer {
+    background-color: #00215298;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+logo {
+    font-size: 40px;
+    font-family: "cz2";
+    padding: 5px;
+
+    border: 0px solid rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+}
+logo>img {
+  vertical-align: middle;
+}
+
+nav>a,opts>a {
+    color: white;
+    margin: 0 10px;
+    padding: 10px;
+    vertical-align: middle;
+    text-decoration: none;
+    
+    border: 0px solid rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+}
+nav opts>a:hover,logo:hover{
+    color: #ff9800;
+    border: 5px solid white;
+}
+nav opts>a:active,logo:active {
+    color: #ffcd2b;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #00215298;
+    border: 2px solid white;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.projekt {
+color: black;
+  background: white;
+  padding: 10px;
+  border-radius: 24px;
+  box-shadow: 0 0 5px #ccc;
+  transition: all 0.3s;
+}
+.projekt:hover {
+    transform: scale(1.1);
+}
+.projekt:active {
+    transform: scale(1.5);
+}
+.projekt>img{
+    max-width: min(70vw,840px);
+    border-radius: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+input, textarea, button {
+  padding: 10px;
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+  background-color: #00215298;
+  color: white;
+}
+button {
+  background: #2e9200;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+    background: #09c712;
+}
+button:active {
+    transform: scale(0.9);
+}
+
+footer {
+    font-size: 14px; margin-top: 30px;
+    background-color: #00215298;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+}
+footer>a>img{
+    height: 30px;
+    vertical-align: middle;
+    margin: 2px;
+    
+    border: 0px solid rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-in-out;
+    border-radius: 0px;
+}
+footer>a>img:hover{
+    color: #ff9800;
+    border: 5px solid white;
+    height: 40px;
+    border-radius: 10px;
+}
+footer>a>img:active {
+    transform: scale(0.9);
+}
+
+iframe{
+    border-radius: 20px;
+}
+
+
+
+@media (max-width: 550px) {
+    nav a {
+    display: block;
+    margin: 5px 0;
+    padding: 0;
+    }
+  .portfolio { flex-direction: column; align-items: center; }
+}
+
+@font-face {
+    font-family: 'cz2';
+    src: url(Jersey10-Regular.ttf);
+}
+@font-face {
+    font-family: 'cz1';
+    src: url(Jersey25-Regular.ttf);
+}
