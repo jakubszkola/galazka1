@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing:border-box;
     font-family: "cz1", Arial, sans-serif;
+    transition: all 0.3s ease-in-out;
     
 }
 body {
@@ -76,6 +77,13 @@ nav opts>a:active,logo:active {
     color: #ffcd2b;
     margin: 0 5px;
 }
+#ofertakontakt{color: white;
+    border: 0px solid rgba(255, 255, 255, 0);
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;}
+#ofertakontakt:hover{color: #ff9800;
+    border: 5px solid white;padding: 10px;}
+#ofertakontakt:active{color: #ffcd2b;}
 
 main {
     padding: 20px;
@@ -198,6 +206,16 @@ footer>a>img:active {
 iframe{
     border-radius: 20px;
     max-width: 100%;
+}
+table{
+    width: 100%;
+    margin: 10px;
+}
+th,td{
+    padding: 10px;
+}
+th{
+    background-color: #0000003a;
 }
 
 
