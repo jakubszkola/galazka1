@@ -123,7 +123,7 @@ main {
     outline: 50vw solid rgba(0, 0, 0, 0.95);
     background:rgba(0, 0, 0, 0.95);
     color: white;
-    box-shadow: 0 0 0 #rgba(0, 0, 0, 0.95);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.95);
 
     /*position: absolute;
     top: 50%;
